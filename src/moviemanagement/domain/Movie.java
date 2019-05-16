@@ -1,13 +1,17 @@
 package moviemanagement.domain;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
-public class Movie implements java.io.Serializable{
+@XmlRootElement
+public class Movie implements Serializable{
  
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,6 +37,32 @@ public class Movie implements java.io.Serializable{
 	public String toString() {
 		return this.title + " : " + this.year + " : " + this.genre;
 	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
+	
 	
 	
 }

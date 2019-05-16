@@ -11,7 +11,7 @@ import moviemanagement.domain.Movie;
 import moviemanagement.service.MovieService;
 
 @Stateless
-public class MovieServiceImplementation implements MovieService {
+public class MovieServiceImplementation implements MovieService, MovieServiceLocal {
 	//connecting our data access class 
 	
 	@Inject

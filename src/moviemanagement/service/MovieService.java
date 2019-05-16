@@ -7,9 +7,6 @@ import javax.ejb.Remote;
 import moviemanagement.domain.Movie;
 
 @Remote
-public interface MovieService {
+public interface MovieService extends MovieServiceLocal{
 
-	public void addMovie(Movie movie);
-	public List<Movie> getAllMovies();
-	public List<Movie> searchByMovieTitle(String title);
 }
